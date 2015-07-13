@@ -1,7 +1,7 @@
 <?php
 function playGame(){
 // game picks a random number between 1 and 100.
-$randomNumber = rand(1, 100);
+$randomNumber = mt_rand(1, 100);
 $attempts = 1;
 
 // prompts user to guess the number
@@ -25,7 +25,7 @@ $guess = trim(fgets(STDIN)) . PHP_EOL;
     // if a user guesses the number, the game should declare "GOOD GUESS!"
     if ($guess == $randomNumber){
         echo "YOU WIN! GOOD GUESS." . PHP_EOL;
-        echo "You guessed $attempts times.";
+        echo "You guessed $attempts times." . PHP_EOL;
     }
 }
 playGame();
